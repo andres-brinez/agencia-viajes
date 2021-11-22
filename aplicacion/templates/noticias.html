@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static   %}
+
+{% block titulo %} COVID-19 {% endblock titulo %}
+
+
+{% block principal %}
+
+<section class="covid">
+    <div class="container"  >
+        <div class="row ">
+            <div class="col text-center"style="padding:50px">
+
+                <h1 >COVID-19</h1>
+                <p>
+                    La vacunación generalizada se muestra prometedora para terminar con la pandemia de la enfermedad por coronavirus 2019 (COVID-19), pero no sucederá de la noche a la mañana.Mientras tanto, sigue tomando precauciones para protegerte a ti y proteger a otros si tienes que viajar. Si estás totalmente vacunado,
+                    es menos probable que contraigas y propagues la COVID-19, pero los viajes internacionales pueden aumentar el riesgo de contraer nuevas variantes de la COVID-19. Los Centros para el Control y la Prevención de Enfermedades (CDC, por sus siglas en inglés) sugieren que, siempre que sea posible, evites viajar hasta que estés totalmente vacunado,si los que no se vacunaron deciden viajar, tienen que hacerse una prueba de COVID-19 de uno a tres días antes de la salida y una segunda prueba entre tres y cinco días después de regresar.
+                    Deben quedarse en casa y permanecer en cuarentena durante siete días después del viaje, o 10 días si no se hacen la prueba al final del viaje.
+                </p>
+
+                <p>
+                    En algunos aeropuertos  se les pide a los viajeros que tomen más precauciones durante la inspección de control en el aeropuerto. Por ejemplo: poner los artículos personales como las billeteras, los teléfonos y las llaves en el equipaje de mano en vez de colocarlos en las bandejas de plástico, así como mantenerse a seis pies de distancia de otras personas en la fila. Los funcionarios de la TSA tienen como
+                     requisito usar mascarilla y guantes, y cambiarse los guantes después de revisar a un pasajero, y se recomienda a los viajeros que también usen mascarillas. Las multas por negarse a usar una mascarilla pueden variar desde $250 para la primera infracción a $1,500 para los reincidentes.
+                </p>
+            </div>
+            
+        </div>
+        <a href="https://www.kayak.com.co/restricciones-de-viaje?&" class="btn btn-danger ">VER RESTRICCONES EN  LOS PAISES</a> <a class="btn btn-warning" href="{% url 'programar'  %}" role="button">PROGRAMAR  VIAJE</a>
+
+        <div class="row"style="padding-bottom:50px">
+            <blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/Uruguay?src=hash&amp;ref_src=twsrc%5Etfw">#Uruguay</a> oficializó las condiciones de ingreso para turistas extranjeros. <br>Las vacunas anti covid solo tendrán validez si fueron administradas en los últimos 9 meses previo al embarque.<a href="https://twitter.com/CamturUruguay?ref_src=twsrc%5Etfw">@CamturUruguay</a> <a href="https://twitter.com/Uruguay_Natural?ref_src=twsrc%5Etfw">@Uruguay_Natural</a> <a href="https://t.co/8lv05GTRKP">https://t.co/8lv05GTRKP</a></p>&mdash; Hosteltur Latam (@HostelturLatam) <a href="https://twitter.com/HostelturLatam/status/1454112350995456009?ref_src=twsrc%5Etfw">October 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Estas son las vacunas aceptadas para poder entrar a EE.UU. desde noviembre <a href="https://t.co/zLIhCYH6JU">https://t.co/zLIhCYH6JU</a> a través de <a href="https://twitter.com/ELTIEMPO?ref_src=twsrc%5Etfw">@eltiempo</a></p>&mdash; Viajar EL TIEMPO (@ViajarET) <a href="https://twitter.com/ViajarET/status/1441458588992434177?ref_src=twsrc%5Etfw">September 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       </div>
+    </div>
+    
+</section>
+    
+{% endblock principal %}
+    

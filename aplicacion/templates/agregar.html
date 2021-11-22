@@ -1,0 +1,149 @@
+{% extends 'baseprogramar.html' %}
+{% load static   %}
+
+{% block titulo %} AGREGAR {% endblock titulo %}
+
+{% block principal %} 
+
+<!-- barra de navegacion-->
+<nav class="site-header sticky-top ">
+    <nav class="site-header sticky-top ">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+        
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'inicio'  %}"><font style="vertical-align: inherit;"><h5>INICIO</h5><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+            </svg>
+          </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block menu " href="{% url 'covid-19'  %}"><font style="vertical-align: inherit;"><h5>COVID-19</h5><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+            </svg>
+            </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'paquetes'  %}"><font style="vertical-align: inherit;"><h5>PAQUETES</h5><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
+            </svg>
+            </font>
+          </a>>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'programar'  %}"><font style="vertical-align: inherit;"><h5>PROGRAMAR</h5> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar-range" viewBox="0 0 16 16">
+           <path d="M9 7a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1zM1 9h4a1 1 0 0 1 0 2H1V9z"/>
+           <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+           </svg>
+          </font>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#footer"><font style="vertical-align: inherit;"><h5>CONTÁCTENOS </h5><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+          <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+          <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+          </font>
+        </a>
+  </nav>
+
+  <div class="container  mt-1 " >
+    
+ 
+    <center><b class="display-4 text-white ">AGREGAR VIAJE</b></center>
+    <hr class="bg-info pt-0 mt-0">
+    <center><h3 class="text-white">Te invitamos a responder el siguiente formulario</h3> </center>
+
+    <form  action="{% url 'agregar' %} " method="post" class="mt-5 ">
+        {% csrf_token %}
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        
+        <div class="row form-group " >
+            <label for="nombre"  class="col-form-label col-md-4 text-white "></label>  
+            <div class="col-md-4 ">
+            <input  name="nombre"    type="text" id="nombre" class="form-control" placeholder="NOMBRE  " >
+            </div>
+        </div>
+    
+        <div class="row form-group">
+            <label for="identificacion"  class="col-form-label col-md-4  text-white "></label>  
+            <div class="col-md-4">
+            <input  name="identificacion"  value=""  type="number" id="identificacion"class="form-control" placeholder="IDENTIFICACIÓN ">
+            </div>
+        </div>
+    
+        <div class="row form-group">
+            <label for="correo "  class="col-form-label col-md-4 text-white "></label>  
+            <div class="col-md-4 ">
+            <input  name="correo"  value=""  type="email" id="correo"class="form-control"placeholder="CORREO ">
+            </div>
+        </div>
+    
+        <section action="/action_page.php">
+            <div class="row form-group">
+                <label for="edad "  class="col-form-label col-md-4  text-white "></label>  
+                <div class="col-md-4 ">
+                <input  name="edad"  value=""  type="number" id="edad"class="form-control" min="18" max="70"placeholder="EDAD">
+                </div>
+            </div>
+        </section>
+    
+        <div class="row form-group " >
+            <label for="destino"  class="col-form-label col-md-4 text-white "></label>  
+            <div class="col-md-4 ">
+            <input  name="destino"  value=""  type="text" id="destino" class="form-control" placeholder="DESTINO">
+            </div>
+        </div>
+    
+        <div class="row form-group">
+            <label for="fecha"  class="col-form-label col-md-4 text-white "></label>  
+            <div class="col-md-4 ">
+            <input type="datetime-local" id="fecha" name="fecha"  class="form-control" name="trip-start"  >                                                 
+           </div>
+        </div>
+    
+        <section action="/action_page.php">
+            <div class="row form-group">
+                <label for="dias "  class="col-form-label col-md-4  text-white "></label>  
+                <div class="col-md-4 ">
+                <input  name="dias"  value=""  type="number" id="dias"class="form-control" min="1" placeholder="DIAS DEL VIAJE">
+                </div>
+            </div>
+        </section>
+    
+        <section action="/action_page.php">
+            <div class="row form-group">
+                <label for="personas "  class="col-form-label col-md-4  text-white "></label>  
+                <div class="col-md-4 ">
+                <input  name="personas"  value=""  type="number" id="personas"class="form-control" min="1" placeholder="NUMERO DE  PERSONAS">
+                </div>
+            </div>
+        </section>
+    
+        <section action="/action_page.php">
+            <div class="row form-group">
+                <label for="dias "  class="col-form-label col-md-4  text-white "></label>  
+                <div class="col-md-4 ">
+                <input  name="presupuesto"  value=""  type="number" id="presupuesto"class="form-control" min="100.000" placeholder="PRESUPUESTO ">
+                </div>
+            </div>
+        </section>
+    
+        <div class="row form-group">
+            <label for="comentario"  class="col-form-label col-md-4 text-white "></label>  
+            <div class="col-md-4 ">
+            <textarea name="comentario" rows="3"  type="number" id="comentario"class="form-control"placeholder="COMENTARIO"></textarea>
+           </div>
+        </div>
+
+        <div class="text-center botom">
+            <button  type="submit" class="btn btn-info">ENVIAR</button>
+            <button  type="reset" class="btn btn-danger">ELIMINAR</button>
+    
+        </div>
+
+    </form>
+        
+    
+    
+        
+</div>
+
+{% endblock principal %}

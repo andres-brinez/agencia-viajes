@@ -1,0 +1,151 @@
+
+{% load static   %}
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+     
+    <link rel="icon" href= "{% static 'viajes.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>VIAJA | PAQUETES</title>
+
+    <style>
+           body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+              }
+          .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 340px);
+            gap: 26px;
+            place-content: center;
+            background-color: black;
+          }
+          .product-card {
+            width: 240px; 
+            margin:20px 0px; 
+           }
+          .product-card img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+
+          .cards-container{
+            color: white;
+            text-align:center;
+          }
+
+          
+      
+          footer{
+            text-align:center;
+            background-color: black;
+            color:#1E91F7;
+            font-size:50px;
+            padding-left:5%;
+            padding-top: 100px;
+            padding-bottom:100px ;
+            }
+          
+      
+        
+         
+
+ 
+        
+    </style>
+    
+  
+  <body>
+    <section class="main-container" >
+      <div class="cards-container texto">
+        <div class="product-card" >
+            <h1  >PERÚ PERD44AS5</h1>
+            <img src= "{% static '/paquetes/peru.jpg' %}"  alt="">
+            <p >$5.000.000 COP</p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+          </div>
+        
+        <div class="product-card texto">
+            <h1 >MÉXICO MED44A32</h1>
+            <img src="{% static '/paquetes/mexico.jpg' %}" alt="">
+            <p >$10.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto">
+            <h1 >BRAZIL BRD33DE3</h1>
+            <img src="{% static '/paquetes/brazil.jpg' %}" alt="">
+            <p >$8.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+
+        <div class="product-card texto">
+            <h1>ESPAÑA SPA11DA3</h1>
+            <img src="{% static '/paquetes/españa.jpg' %}"alt="">
+            <p >$18.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto">
+            <h1 style="text-align:center;">JAPON JAPB4AS5</h1>
+            <img src= "{% static '/paquetes/japon.jpg' %}"  alt="">
+            <p style="text-align:center;">$20.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+  
+        <div class="product-card texto">
+            <h1  >ITALIA ITAL88W62</h1>
+            <img src="{% static '/paquetes/italia.jpg' %}" alt="">
+            <p >$15.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto">
+            <h1> SUIZA SUIZ21DZ8</h1>
+            <img src="{% static '/paquetes/suiza.jpg' %}" alt="">
+            <p >$11.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto">
+            <h1>ALEMANIA AL240</h1>
+            <img src="{% static '/paquetes/alemania.jpg' %}"alt="">
+            <p >$18.000.000 COP </p>
+            <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        
+        <div class="product-card texto">
+          <h1>INGLATERRA ING3</h1>
+          <img src="{% static '/paquetes/inglaterra.jpg' %}"alt="">
+          <p >$20.000.000 COP </p>
+          <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto ">
+          <h1 >DUBAI DUB19KCR</h1>
+          <img src= "{% static '/paquetes/dubai.jpg' %}"  alt="">
+          <p >$30.000.000 COP </p>
+          <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto ">
+          <h1 >CUBA CUB55MNR</h1>
+          <img src= "{% static '/paquetes/cuba.jpg' %}"  alt="">
+          <p >$8.000.000 COP </p>
+          <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+        <div class="product-card texto ">
+          <h1 >COLOMBIA CO1R</h1>
+          <img src= "{% static '/paquetes/colombia.jpg' %}"  alt="">
+          <p >$10.000.000 COP </p>
+          <a  href="{% url 'programar'  %}" class="texto">COMPRAR PAQUETE</a>
+        </div>
+
+      </section>
+
+      <footer>
+        <a   href="{% url 'programar'  %}" > INICIO </a>
+      </footer>
+        
+  </body>
+
+  
+</html>

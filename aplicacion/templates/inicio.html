@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static   %}
+
+
+{% block titulo %} INICIO {% endblock titulo %}
+
+{% block principal %} 
+
+<div class="imagen">
+    <img src= "{% static '/inicio/san andres.jpg ' %}" class="d-block w-100" alt="..."> 
+    <img src="{% static '/inicio/cancun.jpg ' %}" class="d-block w-100" alt="">  
+    <img src="{% static '/inicio/vegas.jpg ' %}" class="d-block w-100" alt="...">
+</div>
+
+ 
+<!-- tarjetas -->
+<section  id= "tarjeta" class="card" class="container mt-5 pt-100" > 
+    <h1 class="a">MAS VISITADOS</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="{% static '/visitados/miami.jpg ' %}" class="card-img-top " alt="...">  
+        <a href="{% url 'miami'  %} " class="btn btn-primary">VER MÁS</a>
+      </div> 
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src= "{% static '/visitados/barranquilla.jpg ' %}" class="card-img-top" alt="...">
+
+        <a href="{% url 'barranquilla' %}" class="btn btn-primary">VER MÁS</a> 
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static '/visitados/paris.jpg' %}" class="card-img-top" alt="...">
+        <a href="{% url 'paris' %}" class="btn btn-primary">VER MÁS</a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="{% static '/visitados/medellin.jpg' %}" class="card-img-top" alt="...">
+        <a href="{% url 'medellin' %}" class="btn btn-primary">VER MÁS</a>
+      </div>
+    </div>
+  </div>
+  </section>
+{% endblock principal%}
+
+
+
+
+
+
+  
+
+
+    
