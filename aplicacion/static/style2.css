@@ -1,0 +1,56 @@
+
+
+nav, main,aside,footer{
+    text-align: center;
+        } 
+
+/*header,cabecera*/
+.titulo{
+
+    background-color: #071F27;
+       }
+
+/* nav */
+
+nav{ 
+    display: block;
+    background-color: rgba(0, 0, 0, .85);
+    
+}
+
+
+/* main informacion principlal */
+
+
+  
+
+/* icono */
+
+.contenedor{
+
+    margin: 0 auto;
+  }
+
+
+
+      
+/*barra  */
+
+
+    
+/*barra l */
+      
+/*barra  inferior */   
+footer{
+    padding: 50px;
+    padding-bottom: 1px;
+    background-color: #071F27;
+    color:  #f8f9fa;
+      }
+
+
+.botom{
+    padding: 20px;
+}
+
+

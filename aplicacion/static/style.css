@@ -1,0 +1,36 @@
+
+nav, main,aside,footer{
+    text-align: center;
+        } 
+
+nav{ 
+    display: block;
+    background-color: black;
+            }
+
+.covid {
+    background-color: white;
+}
+
+
+.card{
+    padding: 20px;
+    background-color: #343a40;
+    color: whitesmoke;
+}
+
+/* icono */
+
+.contenedor{
+
+    margin: 0 auto;
+  }
+
+      
+/*barra  inferior */   
+footer{
+    padding: 50px;
+    padding-bottom: 1px;
+    background-color: #071F27;
+    color:  #f8f9fa;
+      }
