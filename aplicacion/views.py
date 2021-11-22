@@ -14,7 +14,7 @@ from datetime import date, datetime
 
     
 def inicio(request):    
-    return render( request,'inicio.html')
+    return render(  request,'inicio.html')
 
 def miami (request):
     if request.method == "POST": 
